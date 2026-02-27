@@ -51,3 +51,5 @@ Thumbs.db
 
 # TypeScript
 *.tsbuildinfo
+
+annotation-harness/node_modules/

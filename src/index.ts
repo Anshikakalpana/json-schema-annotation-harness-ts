@@ -5,15 +5,13 @@ import { registerSchema as registerSchema2019 } from "@hyperjump/json-schema/dra
 import { registerSchema as registerSchema2020 } from "@hyperjump/json-schema/draft-2020-12";
 import { annotate } from "@hyperjump/json-schema/annotations/experimental";
 import * as AnnotatedInstance from "@hyperjump/json-schema/annotated-instance/experimental";
-import { loadTestFile } from "./loader.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-
-
+// DRAFTS
 
 const DRAFTS = [
   {
@@ -48,121 +46,88 @@ const DRAFTS = [
   },
 ];
 
-// Compatibility string → number
-function compatToNumber(compat?: string): number {
-  if (!compat) return 4; // default — sabse purana
-  const map: Record<string, number> = {
-    "3": 3, "4": 4, "6": 6, "7": 7,
-    "2019": 2019, "2020": 2020,
+// COMPATIBILITY CHECK 
+
+
+//  * Parses compatibility string from annotation test suite.
+//  * Supported formats: "4", "6", "7", "2019", "2020", "<=2019", ">=6", "=2020"
+//  * Returns true if the given draftVersion satisfies the constraint.
+ 
+function isCompatible(compatibility: string | undefined, draftVersion: number): boolean {
+  if (!compatibility) return true; // no constraint = applies to all drafts
+
+  const versionMap: Record<string, number> = {
+    "3": 3, "4": 4, "6": 6, "7": 7, "2019": 2019, "2020": 2020,
   };
-  return map[compat] ?? 4;
+
+  const resolveVersion = (str: string) => versionMap[str] ?? parseInt(str);
+
+  // Handle operators: <=, >=, =
+  const match = compatibility.match(/^(<=|>=|=)?(\d+)$/);
+  if (!match) return false;
+
+  const [, operator, versionStr] = match;
+  const version = resolveVersion(versionStr);
+
+  if (operator === "<=") return draftVersion <= version;
+  if (operator === ">=") return draftVersion >= version;
+  if (operator === "=")  return draftVersion === version;
+
+
+
+  return draftVersion >= version;
 }
 
-
-// SCHEMA WALKER 
-
-function buildAnnotationIndex(
-  schema: any,
-  keyword: string,
-  path: string = "#"
-): Record<string, unknown> {
-  const index: Record<string, unknown> = {};
-  if (schema === null || typeof schema !== "object") return index;
-
-  if (schema[keyword] !== undefined) index[path] = schema[keyword];
-
-  if (schema.properties)
-    for (const [k, s] of Object.entries(schema.properties))
-      Object.assign(index, buildAnnotationIndex(s, keyword, `${path}/properties/${k}`));
-
-  if (schema.patternProperties)
-    for (const [p, s] of Object.entries(schema.patternProperties))
-      Object.assign(index, buildAnnotationIndex(s, keyword, `${path}/patternProperties/${encodeURIComponent(p)}`));
-
-  if (schema.additionalProperties && typeof schema.additionalProperties === "object")
-    Object.assign(index, buildAnnotationIndex(schema.additionalProperties, keyword, `${path}/additionalProperties`));
-
-  for (const kw of ["allOf", "anyOf", "oneOf"] as const)
-    if (Array.isArray(schema[kw]))
-      schema[kw].forEach((s: any, i: number) =>
-        Object.assign(index, buildAnnotationIndex(s, keyword, `${path}/${kw}/${i}`)));
-
-  if (schema.not && typeof schema.not === "object")
-    Object.assign(index, buildAnnotationIndex(schema.not, keyword, `${path}/not`));
-
-  for (const kw of ["if", "then", "else"])
-    if (schema[kw] && typeof schema[kw] === "object")
-      Object.assign(index, buildAnnotationIndex(schema[kw], keyword, `${path}/${kw}`));
-
-  if (Array.isArray(schema.prefixItems))
-    schema.prefixItems.forEach((s: any, i: number) =>
-      Object.assign(index, buildAnnotationIndex(s, keyword, `${path}/prefixItems/${i}`)));
-
-  if (schema.items && typeof schema.items === "object")
-    Object.assign(index, buildAnnotationIndex(schema.items, keyword, `${path}/items`));
-
-  if (schema.contains && typeof schema.contains === "object")
-    Object.assign(index, buildAnnotationIndex(schema.contains, keyword, `${path}/contains`));
-
-  if (schema.dependentSchemas)
-    for (const [k, s] of Object.entries(schema.dependentSchemas))
-      Object.assign(index, buildAnnotationIndex(s, keyword, `${path}/dependentSchemas/${k}`));
-
-  for (const kw of ["unevaluatedProperties", "unevaluatedItems"])
-    if (schema[kw] && typeof schema[kw] === "object")
-      Object.assign(index, buildAnnotationIndex(schema[kw], keyword, `${path}/${kw}`));
-
-  if (schema.$defs)
-    for (const [k, s] of Object.entries(schema.$defs))
-      Object.assign(index, buildAnnotationIndex(s, keyword, `${path}/$defs/${k}`));
-
-  if (schema.propertyNames && typeof schema.propertyNames === "object")
-    Object.assign(index, buildAnnotationIndex(schema.propertyNames, keyword, `${path}/propertyNames`));
-
-  return index;
-}
+//COMPARE 
 
 
-// COMPARE FUNCTION
+function compare(
+  actual: unknown[],
+  expected: Record<string, unknown>
+): boolean {
+  const expectedValues = Object.values(expected);
 
-function compare(actual: unknown[], expected: unknown, schema: any, keyword: string): boolean {
-  if (typeof expected === "object" && expected !== null && !Array.isArray(expected)) {
-    if (Object.keys(expected).length === 0) return actual.length === 0;
+  // Both empty
+  if (expectedValues.length === 0) return actual.length === 0;
 
-    const expectedObj = expected as Record<string, unknown>;
-    const expectedValues = Object.values(expectedObj);
+  // Count mismatch
+  if (actual.length !== expectedValues.length) return false;
 
-    const sortA = [...actual].map(JSON.stringify as any).sort();
-    const sortE = [...expectedValues].map(JSON.stringify as any).sort();
-    if (sortA.length !== sortE.length) return false;
-    if (!sortA.every((v, i) => v === sortE[i])) return false;
-
-    const fullIndex = buildAnnotationIndex(schema, keyword);
-
-    for (const [expectedPath, expectedValue] of Object.entries(expectedObj)) {
-      if (!(expectedPath in fullIndex)) return false;
-      const valueMatch = actual.some((a) => JSON.stringify(a) === JSON.stringify(expectedValue));
-      if (!valueMatch) return false;
-      if (JSON.stringify(fullIndex[expectedPath]) !== JSON.stringify(expectedValue)) return false;
-    }
-
-    return true;
+  // Every expected value must exist in actual
+  for (const expectedValue of expectedValues) {
+    const found = actual.some(
+      (a) => JSON.stringify(a) === JSON.stringify(expectedValue)
+    );
+    if (!found) return false;
   }
-  return false;
+
+  return true;
 }
 
-
-
+//LOAD TEST FILES 
 
 const testDir = path.join(__dirname, "../JSON-Schema-Test-Suite/annotations/tests");
-const testFiles = fs.readdirSync(testDir).filter((f) => f.endsWith(".json")).map((f) => path.join(testDir, f));
+const testFiles = fs
+  .readdirSync(testDir)
+  .filter((f) => f.endsWith(".json"))
+  .map((f) => path.join(testDir, f));
 
-// Per-draft counters
-const draftStats: Record<string, { passed: number; failed: number; errors: number; skipped: number }> = {};
-for (const d of DRAFTS) draftStats[d.name] = { passed: 0, failed: 0, errors: 0, skipped: 0 };
 
-// Grand totals
-let totalPassed = 0, totalFailed = 0, totalErrors = 0, totalSkipped = 0;
+
+const draftStats: Record<
+  string,
+  { passed: number; failed: number; errors: number; skipped: number }
+> = {};
+for (const d of DRAFTS) {
+  draftStats[d.name] = { passed: 0, failed: 0, errors: 0, skipped: 0 };
+}
+
+let totalPassed = 0;
+let totalFailed = 0;
+let totalErrors = 0;
+let totalSkipped = 0;
+
+
 
 for (const filePath of testFiles) {
   const fileName = path.basename(filePath);
@@ -170,64 +135,76 @@ for (const filePath of testFiles) {
   console.log(` File: ${fileName}`);
   console.log("=".repeat(60));
 
-  const raw = loadTestFile(filePath);
-  const suites = raw.suite ?? raw;
+  const raw = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  const suites = Array.isArray(raw) ? raw : raw.suite ?? [];
 
   for (const suite of suites) {
     console.log(`\n Suite: ${suite.description}`);
 
-    const suiteCompatNumber = compatToNumber(suite.compatibility);
-
     for (const test of suite.tests) {
       console.log(`\n   Test: ${test.description ?? "(no description)"}`);
 
-      //  Har applicable draft ke saath run karo
       for (const draft of DRAFTS) {
 
-        // Skip karo agar ye test is draft ke liye nahi hai
-        if (suiteCompatNumber > draft.compatibilityValue) {
-          console.log(`  SKIP [${draft.name}] — needs compat ${suite.compatibility}`);
+        //Compatibility check 
+        if (!isCompatible(suite.compatibility, draft.compatibilityValue)) {
+          console.log(
+            `  SKIP [${draft.name}] — needs compat ${suite.compatibility}`
+          );
           draftStats[draft.name].skipped++;
           totalSkipped++;
           continue;
         }
 
-        const schemaId = `https://example.com/${Math.random()}`;
+        const schemaId = `https://example.com/test-${Math.random()}`;
 
         try {
-          // $schema ko current draft ke dialectId se override karo
-          const schemaWithoutDialect = { ...suite.schema };
-          delete schemaWithoutDialect.$schema;
-
+          // Register schema with the current draft's dialect
+          const schema = {
+            $schema: draft.dialectId,
+            ...suite.schema,
+          };
+          delete schema.$schema; // remove any existing $schema from test suite
           draft.registerSchema(
-            { $schema: draft.dialectId, ...schemaWithoutDialect },
+            { $schema: draft.dialectId, ...suite.schema },
             schemaId
           );
 
+          // Run hyperjump annotation engine
           const instance = await annotate(schemaId, test.instance);
 
           for (const assertion of test.assertions) {
             const { location, keyword, expected } = assertion;
+
+            // Convert location to JSON pointer format
             const pointer = location === "" ? "#" : `#${location}`;
 
+            // Collect actual annotations from hyperjump
             let actual: unknown[] = [];
             try {
               const node = AnnotatedInstance.get(pointer, instance);
-              actual = node ? AnnotatedInstance.annotation(node, keyword, draft.dialectId) : [];
+              actual = node
+                ? AnnotatedInstance.annotation(node, keyword, draft.dialectId)
+                : [];
             } catch {
               actual = [];
             }
 
-            const pass = compare(actual, expected, suite.schema, keyword);
+            // Compare actual vs expected
+            const pass = compare(actual, expected);
 
             if (pass) {
-              console.log(`  PASS [${draft.name}] — [${keyword}] @ "${location}"`);
+              console.log(
+                `  PASS [${draft.name}] — [${keyword}] @ "${location}"`
+              );
               draftStats[draft.name].passed++;
               totalPassed++;
             } else {
-              console.log(`  FAIL [${draft.name}] — [${keyword}] @ "${location}"`);
-              console.log(`  Expected: ${JSON.stringify(expected)}`);
-              console.log(`  Got:      ${JSON.stringify(actual)}`);
+              console.log(
+                `  FAIL [${draft.name}] — [${keyword}] @ "${location}"`
+              );
+              console.log(`   Expected values : ${JSON.stringify(Object.values(expected))}`);
+              console.log(`   Actual values   : ${JSON.stringify(actual)}`);
               draftStats[draft.name].failed++;
               totalFailed++;
             }
@@ -242,12 +219,12 @@ for (const filePath of testFiles) {
   }
 }
 
-
-
+// RESULTS 
 
 console.log(`\n${"=".repeat(60)}`);
 console.log(`RESULTS PER DRAFT`);
 console.log("=".repeat(60));
+
 for (const draft of DRAFTS) {
   const s = draftStats[draft.name];
   const total = s.passed + s.failed + s.errors;

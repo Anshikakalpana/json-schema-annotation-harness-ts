@@ -1,3 +1,6 @@
+
+
+
 import { registerSchema as registerSchema4 } from "@hyperjump/json-schema/draft-04";
 import { registerSchema as registerSchema6 } from "@hyperjump/json-schema/draft-06";
 import { registerSchema as registerSchema7 } from "@hyperjump/json-schema/draft-07";
@@ -11,7 +14,7 @@ import fs from "fs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// DRAFTS
+
 
 const DRAFTS = [
   {
@@ -46,15 +49,9 @@ const DRAFTS = [
   },
 ];
 
-// COMPATIBILITY CHECK 
 
-
-//  * Parses compatibility string from annotation test suite.
-//  * Supported formats: "4", "6", "7", "2019", "2020", "<=2019", ">=6", "=2020"
-//  * Returns true if the given draftVersion satisfies the constraint.
- 
 function isCompatible(compatibility: string | undefined, draftVersion: number): boolean {
-  if (!compatibility) return true; // no constraint = applies to all drafts
+  if (!compatibility) return true;
 
   const versionMap: Record<string, number> = {
     "3": 3, "4": 4, "6": 6, "7": 7, "2019": 2019, "2020": 2020,
@@ -62,7 +59,6 @@ function isCompatible(compatibility: string | undefined, draftVersion: number): 
 
   const resolveVersion = (str: string) => versionMap[str] ?? parseInt(str);
 
-  // Handle operators: <=, >=, =
   const match = compatibility.match(/^(<=|>=|=)?(\d+)$/);
   if (!match) return false;
 
@@ -73,38 +69,51 @@ function isCompatible(compatibility: string | undefined, draftVersion: number): 
   if (operator === ">=") return draftVersion >= version;
   if (operator === "=")  return draftVersion === version;
 
-
-
+  
   return draftVersion >= version;
 }
-
-//COMPARE 
 
 
 function compare(
   actual: unknown[],
   expected: Record<string, unknown>
-): boolean {
-  const expectedValues = Object.values(expected);
+): { pass: boolean; failures: string[] } {
+  const failures: string[] = [];
+  const expectedEntries = Object.entries(expected);
 
-  // Both empty
-  if (expectedValues.length === 0) return actual.length === 0;
+  // Case 1 — both empty — no annotations expected, none produced
+  if (expectedEntries.length === 0) {
+    if (actual.length === 0) return { pass: true, failures: [] };
+    failures.push(
+      `Expected no annotations but got ${actual.length}: ${JSON.stringify(actual)}`
+    );
+    return { pass: false, failures };
+  }
 
-  // Count mismatch
-  if (actual.length !== expectedValues.length) return false;
+  // Case 2 — count mismatch
+  // e.g. expected 2 annotations but implementation produced 3 or 1
+  if (actual.length !== expectedEntries.length) {
+    failures.push(
+      `Count mismatch — expected ${expectedEntries.length} annotation(s), got ${actual.length}`
+    );
+  }
 
-  // Every expected value must exist in actual
-  for (const expectedValue of expectedValues) {
+
+  for (const [schemaLocation, expectedValue] of expectedEntries) {
     const found = actual.some(
       (a) => JSON.stringify(a) === JSON.stringify(expectedValue)
     );
-    if (!found) return false;
+    if (!found) {
+      failures.push(
+        `Schema location "${schemaLocation}" — expected ${JSON.stringify(expectedValue)} but not found in actual annotations`
+      );
+    }
   }
 
-  return true;
+  return { pass: failures.length === 0, failures };
 }
 
-//LOAD TEST FILES 
+
 
 const testDir = path.join(__dirname, "../JSON-Schema-Test-Suite/annotations/tests");
 const testFiles = fs
@@ -146,11 +155,9 @@ for (const filePath of testFiles) {
 
       for (const draft of DRAFTS) {
 
-        //Compatibility check 
+       
         if (!isCompatible(suite.compatibility, draft.compatibilityValue)) {
-          console.log(
-            `  SKIP [${draft.name}] — needs compat ${suite.compatibility}`
-          );
+          console.log(`  SKIP [${draft.name}] — needs compat ${suite.compatibility}`);
           draftStats[draft.name].skipped++;
           totalSkipped++;
           continue;
@@ -159,12 +166,7 @@ for (const filePath of testFiles) {
         const schemaId = `https://example.com/test-${Math.random()}`;
 
         try {
-          // Register schema with the current draft's dialect
-          const schema = {
-            $schema: draft.dialectId,
-            ...suite.schema,
-          };
-          delete schema.$schema; // remove any existing $schema from test suite
+         
           draft.registerSchema(
             { $schema: draft.dialectId, ...suite.schema },
             schemaId
@@ -176,10 +178,11 @@ for (const filePath of testFiles) {
           for (const assertion of test.assertions) {
             const { location, keyword, expected } = assertion;
 
-            // Convert location to JSON pointer format
+            // location = instance path e.g. "/foo" or ""
+            // pointer  = JSON pointer format e.g. "#/foo" or "#"
             const pointer = location === "" ? "#" : `#${location}`;
 
-            // Collect actual annotations from hyperjump
+            // Collect actual annotations from hyperjump at this instance location
             let actual: unknown[] = [];
             try {
               const node = AnnotatedInstance.get(pointer, instance);
@@ -191,20 +194,19 @@ for (const filePath of testFiles) {
             }
 
             // Compare actual vs expected
-            const pass = compare(actual, expected);
+            const { pass, failures } = compare(actual, expected);
 
             if (pass) {
-              console.log(
-                `  PASS [${draft.name}] — [${keyword}] @ "${location}"`
-              );
+              console.log(`  PASS [${draft.name}] — [${keyword}] @ "${location}"`);
               draftStats[draft.name].passed++;
               totalPassed++;
             } else {
-              console.log(
-                `  FAIL [${draft.name}] — [${keyword}] @ "${location}"`
-              );
-              console.log(`   Expected values : ${JSON.stringify(Object.values(expected))}`);
-              console.log(`   Actual values   : ${JSON.stringify(actual)}`);
+              console.log(`  FAIL [${draft.name}] — [${keyword}] @ "${location}"`);
+              console.log(`   Expected : ${JSON.stringify(expected)}`);
+              console.log(`   Actual   : ${JSON.stringify(actual)}`);
+              for (const failure of failures) {
+                console.log(`   ↳ ${failure}`);
+              }
               draftStats[draft.name].failed++;
               totalFailed++;
             }
@@ -219,7 +221,7 @@ for (const filePath of testFiles) {
   }
 }
 
-// RESULTS 
+//  RESULTS
 
 console.log(`\n${"=".repeat(60)}`);
 console.log(`RESULTS PER DRAFT`);
@@ -247,3 +249,4 @@ console.log(` Total   : ${totalPassed + totalFailed + totalErrors}`);
 console.log("=".repeat(60));
 
 process.exit(totalFailed > 0 || totalErrors > 0 ? 1 : 0);
+

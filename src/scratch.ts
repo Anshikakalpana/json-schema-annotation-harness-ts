@@ -8,11 +8,10 @@ async function test(name: string, schema: object, instance: unknown, path: strin
   const id = `https://example.com/${Math.random()}`;
   registerSchema({ $schema: dialectId, ...schema }, id);
   const result = await annotate(id, instance as any);
-  
-  // Root pe check
+ 
   const rootTitles = AnnotatedInstance.annotation(result, "title", dialectId);
   
-  // Specific path pe check
+ 
   const node = AnnotatedInstance.get(`#${path}`, result);
   const pathTitles = node ? AnnotatedInstance.annotation(node, "title", dialectId) : [];
   
@@ -21,19 +20,19 @@ async function test(name: string, schema: object, instance: unknown, path: strin
   console.log(`  "${path}" titles:`, pathTitles);
 }
 
-// Test 1 — $ref ke through annotation — /name pe check karo
+
 await test("$ref propagation", {
   properties: { name: { "$ref": "#/$defs/name" } },
   $defs: { name: { title: "Full Name", type: "string" } }
 }, { name: "Jason" }, "/name");
 
-// Test 2 — unevaluatedProperties — /bar pe check karo
+
 await test("unevaluatedProperties", {
   properties: { foo: { title: "Foo Prop" } },
   unevaluatedProperties: { title: "Extra Prop" }
 }, { foo: 1, bar: 2 }, "/bar");
 
-// Test 3 — $ref at root level
+
 await test("$ref at root", {
   "$ref": "#/$defs/thing",
   $defs: { thing: { title: "Root Thing" } }

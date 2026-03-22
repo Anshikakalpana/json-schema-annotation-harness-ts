@@ -1,0 +1,3404 @@
+{
+  "tests": [
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/properties/foo": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {
+        "#/patternProperties/%5Ea": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "/baz",
+      "expected": {
+        "#/additionalProperties": "Baz"
+      },
+      "actual": [
+        "Baz"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/properties/foo": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {
+        "#/patternProperties/%5Ea": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "/baz",
+      "expected": {
+        "#/additionalProperties": "Baz"
+      },
+      "actual": [
+        "Baz"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/properties/foo": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {
+        "#/patternProperties/%5Ea": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "/baz",
+      "expected": {
+        "#/additionalProperties": "Baz"
+      },
+      "actual": [
+        "Baz"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/properties/foo": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {
+        "#/patternProperties/%5Ea": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/baz",
+      "expected": {
+        "#/additionalProperties": "Baz"
+      },
+      "actual": [
+        "Baz"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/properties/foo": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {
+        "#/patternProperties/%5Ea": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`properties`, `patternProperties`, and `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/baz",
+      "expected": {
+        "#/additionalProperties": "Baz"
+      },
+      "actual": [
+        "Baz"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`propertyNames` doesn't annotate property values",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`propertyNames` doesn't annotate property values",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`propertyNames` doesn't annotate property values",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`propertyNames` doesn't annotate property values",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`prefixItems` and `items`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {
+        "#/prefixItems/0": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`prefixItems` and `items`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/items": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`prefixItems` and `items`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/2",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/contains": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "/2",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "/3",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/contains": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "/2",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "/3",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/contains": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/2",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/3",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/contains": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/2",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`contains`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/3",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`allOf`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/allOf/1": "Bar",
+        "#/allOf/0": "Foo"
+      },
+      "actual": [
+        "Bar",
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`allOf`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/allOf/1": "Bar",
+        "#/allOf/0": "Foo"
+      },
+      "actual": [
+        "Bar",
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`allOf`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/allOf/1": "Bar",
+        "#/allOf/0": "Foo"
+      },
+      "actual": [
+        "Bar",
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`allOf`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/allOf/1": "Bar",
+        "#/allOf/0": "Foo"
+      },
+      "actual": [
+        "Bar",
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`allOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/allOf/1": "Bar",
+        "#/allOf/0": "Foo"
+      },
+      "actual": [
+        "Bar",
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`anyOf`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/anyOf/1": "Bar",
+        "#/anyOf/0": "Foo"
+      },
+      "actual": [
+        "Bar",
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`anyOf`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/anyOf/1": "Bar",
+        "#/anyOf/0": "Foo"
+      },
+      "actual": [
+        "Bar",
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`anyOf`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/anyOf/1": "Bar",
+        "#/anyOf/0": "Foo"
+      },
+      "actual": [
+        "Bar",
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`anyOf`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/anyOf/1": "Bar",
+        "#/anyOf/0": "Foo"
+      },
+      "actual": [
+        "Bar",
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`anyOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/anyOf/1": "Bar",
+        "#/anyOf/0": "Foo"
+      },
+      "actual": [
+        "Bar",
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`anyOf`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/anyOf/1": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`anyOf`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/anyOf/1": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`anyOf`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/anyOf/1": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`anyOf`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/anyOf/1": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`anyOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/anyOf/1": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`oneOf`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/oneOf/0": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`oneOf`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/oneOf/0": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`oneOf`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/oneOf/0": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`oneOf`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/oneOf/0": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`oneOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/oneOf/0": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`oneOf`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/oneOf/1": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`oneOf`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/oneOf/1": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`oneOf`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/oneOf/1": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`oneOf`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/oneOf/1": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`oneOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/oneOf/1": "Bar"
+      },
+      "actual": [
+        "Bar"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`not`",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`not`",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`not`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`not`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`not`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`dependentSchemas`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/dependentSchemas/foo": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`dependentSchemas`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/dependentSchemas/foo": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`dependentSchemas`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`dependentSchemas`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/then": "Then",
+        "#/if": "If"
+      },
+      "actual": [
+        "Then",
+        "If"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/then": "Then",
+        "#/if": "If"
+      },
+      "actual": [
+        "Then",
+        "If"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/then": "Then",
+        "#/if": "If"
+      },
+      "actual": [
+        "Then",
+        "If"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/else": "Else"
+      },
+      "actual": [
+        "Else"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/else": "Else"
+      },
+      "actual": [
+        "Else"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "applicators.json",
+      "suite": "`if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/else": "Else"
+      },
+      "actual": [
+        "Else"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentMediaType` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "contentMediaType",
+      "location": "",
+      "expected": {
+        "#": "application/json"
+      },
+      "actual": [
+        "application/json"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentMediaType` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "contentMediaType",
+      "location": "",
+      "expected": {
+        "#": "application/json"
+      },
+      "actual": [
+        "application/json"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentMediaType` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "contentMediaType",
+      "location": "",
+      "expected": {
+        "#": "application/json"
+      },
+      "actual": [
+        "application/json"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentMediaType` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "contentMediaType",
+      "location": "",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentMediaType` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "contentMediaType",
+      "location": "",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentMediaType` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "contentMediaType",
+      "location": "",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentEncoding` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "contentEncoding",
+      "location": "",
+      "expected": {
+        "#": "base64"
+      },
+      "actual": [
+        "base64"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentEncoding` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "contentEncoding",
+      "location": "",
+      "expected": {
+        "#": "base64"
+      },
+      "actual": [
+        "base64"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentEncoding` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "contentEncoding",
+      "location": "",
+      "expected": {
+        "#": "base64"
+      },
+      "actual": [
+        "base64"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentEncoding` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "contentEncoding",
+      "location": "",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentEncoding` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "contentEncoding",
+      "location": "",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentEncoding` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "contentEncoding",
+      "location": "",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentSchema` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "contentSchema",
+      "location": "",
+      "expected": {
+        "#": {
+          "type": "number"
+        }
+      },
+      "actual": [
+        {
+          "type": "number"
+        }
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentSchema` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "contentSchema",
+      "location": "",
+      "expected": {
+        "#": {
+          "type": "number"
+        }
+      },
+      "actual": [
+        {
+          "type": "number"
+        }
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentSchema` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "contentSchema",
+      "location": "",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentSchema` is an annotation for string instances",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "contentSchema",
+      "location": "",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentSchema` requires `contentMediaType`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "contentSchema",
+      "location": "",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "content.json",
+      "suite": "`contentSchema` requires `contentMediaType`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "contentSchema",
+      "location": "",
+      "expected": {},
+      "actual": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "core.json",
+      "suite": "`$ref` and `$defs`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/$defs/foo": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "core.json",
+      "suite": "`$ref` and `$defs`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/$defs/foo": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "core.json",
+      "suite": "`$dynamicRef` resolves to `$dynamicAnchor`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#/$defs/foo": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "core.json",
+      "suite": "`$dynamicRef` resolves to different `$dynamicAnchor`s depending on dynamic path",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/list/0",
+      "expected": {
+        "#/$defs/numberList/$defs/itemType": "Number Item"
+      },
+      "actual": [
+        "Number Item"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "core.json",
+      "suite": "`$dynamicRef` resolves to different `$dynamicAnchor`s depending on dynamic path",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/list/0",
+      "expected": {
+        "#/$defs/stringList/$defs/itemType": "String Item"
+      },
+      "actual": [
+        "String Item"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "format.json",
+      "suite": "`format` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "format",
+      "location": "",
+      "expected": {
+        "#": "email"
+      },
+      "actual": [
+        "email"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "format.json",
+      "suite": "`format` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "format",
+      "location": "",
+      "expected": {
+        "#": "email"
+      },
+      "actual": [
+        "email"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "format.json",
+      "suite": "`format` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "format",
+      "location": "",
+      "expected": {
+        "#": "email"
+      },
+      "actual": [
+        "email"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "format.json",
+      "suite": "`format` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "format",
+      "location": "",
+      "expected": {
+        "#": "email"
+      },
+      "actual": [
+        "email"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "format.json",
+      "suite": "`format` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "format",
+      "location": "",
+      "expected": {
+        "#": "email"
+      },
+      "actual": [
+        "email"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`title` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`title` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`title` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`title` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`title` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`description` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "description",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`description` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "description",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`description` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "description",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`description` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "description",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`description` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "description",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`default` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "default",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`default` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "default",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`default` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "default",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`default` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "default",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`default` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "default",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`deprecated` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "deprecated",
+      "location": "",
+      "expected": {
+        "#": true
+      },
+      "actual": [
+        true
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`deprecated` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "deprecated",
+      "location": "",
+      "expected": {
+        "#": true
+      },
+      "actual": [
+        true
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`readOnly` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "readOnly",
+      "location": "",
+      "expected": {
+        "#": true
+      },
+      "actual": [
+        true
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`readOnly` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "readOnly",
+      "location": "",
+      "expected": {
+        "#": true
+      },
+      "actual": [
+        true
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`readOnly` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "readOnly",
+      "location": "",
+      "expected": {
+        "#": true
+      },
+      "actual": [
+        true
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`writeOnly` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "writeOnly",
+      "location": "",
+      "expected": {
+        "#": true
+      },
+      "actual": [
+        true
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`writeOnly` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "writeOnly",
+      "location": "",
+      "expected": {
+        "#": true
+      },
+      "actual": [
+        true
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`writeOnly` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "writeOnly",
+      "location": "",
+      "expected": {
+        "#": true
+      },
+      "actual": [
+        true
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`examples` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "examples",
+      "location": "",
+      "expected": {
+        "#": [
+          "Foo",
+          "Bar"
+        ]
+      },
+      "actual": [
+        [
+          "Foo",
+          "Bar"
+        ]
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`examples` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "examples",
+      "location": "",
+      "expected": {
+        "#": [
+          "Foo",
+          "Bar"
+        ]
+      },
+      "actual": [
+        [
+          "Foo",
+          "Bar"
+        ]
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`examples` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "examples",
+      "location": "",
+      "expected": {
+        "#": [
+          "Foo",
+          "Bar"
+        ]
+      },
+      "actual": [
+        [
+          "Foo",
+          "Bar"
+        ]
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "meta-data.json",
+      "suite": "`examples` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "examples",
+      "location": "",
+      "expected": {
+        "#": [
+          "Foo",
+          "Bar"
+        ]
+      },
+      "actual": [
+        [
+          "Foo",
+          "Bar"
+        ]
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` alone",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` alone",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` alone",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` alone",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `properties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/properties/foo": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `properties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `properties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/properties/foo": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `properties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `patternProperties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {
+        "#/patternProperties/%5Ea": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `patternProperties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `patternProperties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/apple",
+      "expected": {
+        "#/patternProperties/%5Ea": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `patternProperties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/additionalProperties": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/additionalProperties": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/additionalProperties": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `additionalProperties`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/additionalProperties": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `dependentSchemas`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `dependentSchemas`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/dependentSchemas/foo/properties/bar": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `dependentSchemas`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `dependentSchemas`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/dependentSchemas/foo/properties/bar": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/then/properties/foo": "Then",
+        "#/if/properties/foo": "If"
+      },
+      "actual": [
+        "Then",
+        "If"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/then/properties/foo": "Then",
+        "#/if/properties/foo": "If"
+      },
+      "actual": [
+        "Then",
+        "If"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/else/properties/foo": "Else"
+      },
+      "actual": [
+        "Else"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/else/properties/foo": "Else"
+      },
+      "actual": [
+        "Else"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `allOf`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/allOf/0/properties/foo": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `allOf`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `allOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/allOf/0/properties/foo": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `allOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `anyOf`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/anyOf/0/properties/foo": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `anyOf`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `anyOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/anyOf/0/properties/foo": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `anyOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `oneOf`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/oneOf/0/properties/foo": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `oneOf`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `oneOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/oneOf/0/properties/foo": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `oneOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `not`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `not`",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `not`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/foo",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedProperties` with `not`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/bar",
+      "expected": {
+        "#/unevaluatedProperties": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` alone",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` alone",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` alone",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` alone",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `prefixItems`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {
+        "#/prefixItems/0": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `prefixItems`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `contains`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {
+        "#/contains": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `contains`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {
+        "#/then/prefixItems/0": "Then",
+        "#/if/prefixItems/0": "If"
+      },
+      "actual": [
+        "Then",
+        "If"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {
+        "#/else/prefixItems/0": "Else"
+      },
+      "actual": [
+        "Else"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `if`, `then`, and `else`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `allOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {
+        "#/allOf/0/prefixItems/0": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `allOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `anyOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {
+        "#/anyOf/0/prefixItems/0": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `anyOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `oneOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {
+        "#/oneOf/0/prefixItems/0": "Evaluated"
+      },
+      "actual": [
+        "Evaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `oneOf`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `not`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/0",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unevaluated.json",
+      "suite": "`unevaluatedItems` with `not`",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "title",
+      "location": "/1",
+      "expected": {
+        "#/unevaluatedItems": "Unevaluated"
+      },
+      "actual": [
+        "Unevaluated"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unknown.json",
+      "suite": "`unknownKeyword` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-04",
+      "keyword": "x-unknownKeyword",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unknown.json",
+      "suite": "`unknownKeyword` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-06",
+      "keyword": "x-unknownKeyword",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unknown.json",
+      "suite": "`unknownKeyword` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-07",
+      "keyword": "x-unknownKeyword",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unknown.json",
+      "suite": "`unknownKeyword` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2019-09",
+      "keyword": "x-unknownKeyword",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "file": "unknown.json",
+      "suite": "`unknownKeyword` is an annotation",
+      "test": "(no description)",
+      "draft": "draft-2020-12",
+      "keyword": "x-unknownKeyword",
+      "location": "",
+      "expected": {
+        "#": "Foo"
+      },
+      "actual": [
+        "Foo"
+      ],
+      "pass": true,
+      "failures": []
+    }
+  ],
+  "drafts": {
+    "draft-04": {
+      "passed": 17,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 42
+    },
+    "draft-06": {
+      "passed": 23,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 39
+    },
+    "draft-07": {
+      "passed": 31,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 31
+    },
+    "draft-2019-09": {
+      "passed": 62,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 12
+    },
+    "draft-2020-12": {
+      "passed": 84,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "summary": {
+    "passed": 217,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 124,
+    "total": 217,
+    "failureRate": "0.00%"
+  }
+}

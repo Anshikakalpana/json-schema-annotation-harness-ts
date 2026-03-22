@@ -39,3 +39,6 @@
  *
  * Returns: { pass, failures[] } — failures lists exactly which entries failed
  */
+
+ ci badge
+ 

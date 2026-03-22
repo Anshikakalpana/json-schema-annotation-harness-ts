@@ -32,6 +32,8 @@ const DRAFTS = [
 function isCompatible(compatibility: string | undefined, draftVersion: number): boolean {
   if (!compatibility) return true;
 
+  // handle comma-separated lists of versions (e.g., ">=6, <2020")
+  
   if (compatibility.includes(",")) {
     return compatibility
       .split(",")
@@ -202,10 +204,15 @@ for (const filePath of testFiles) {
               totalFailed++;
             }
           }
-        } catch (err) {
+        } catch (err: any) {
           draftStats[draft.name].errors++;
-          totalErrors++;
-        }
+         report.tests.push({
+          file: fileName,
+          draft: draft.name,
+         status: 'error',
+        message: err.message
+  });
+}
       }
     }
   }

@@ -76,28 +76,28 @@ def extract_annotations(output: dict, keyword: str, location: str = "") -> list:
     if not isinstance(output, dict):
         return actual
 
-    # 1. Check top-level annotations (this is where jschon puts them in "basic" mode)
+   
     for ann in output.get("annotations", []):
         if not isinstance(ann, dict):
             continue
         if ann.get("instanceLocation") != location:
             continue
 
-        # keywordLocation ends with the keyword we are looking for
+        
         kw_loc = ann.get("keywordLocation", "")
         if kw_loc.endswith(f"/{keyword}") or kw_loc == f"/{keyword}" or kw_loc == keyword:
             value = ann.get("annotation")
             if value is not None:
                 actual.append(value)
 
-    # 2. Recurse into nested details (needed for combinators like allOf, anyOf, unevaluated*, etc.)
+   
     for detail in output.get("details", []):
         actual.extend(extract_annotations(detail, keyword, location))
 
     return actual
 
 
-# ====================== Locate Test Suite ======================
+
 possible_paths = [
     os.path.join(__dir__, "JSON-Schema-Test-Suite/annotations/tests"),
     os.path.join(__dir__, "../JSON-Schema-Test-Suite/annotations/tests"),
@@ -112,7 +112,7 @@ print("Using test_dir:", test_dir)
 test_files = sorted(f for f in os.listdir(test_dir) if f.endswith(".json"))
 
 
-# ====================== Run Tests ======================
+
 stats_by_draft = {d["name"]: {"passed": 0, "failed": 0, "errors": 0, "skipped": 0} for d in all_drafts}
 passed = failed = errors = skipped = 0
 
@@ -190,7 +190,7 @@ report["summary"] = {
     "total": passed + failed + errors + skipped
 }
 
-# ====================== Save Results ======================
+
 out_dir = os.path.join(__dir__, "data")
 os.makedirs(out_dir, exist_ok=True)
 

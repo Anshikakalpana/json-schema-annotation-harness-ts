@@ -1,6 +1,8 @@
 # JSON Schema Annotation Harness (Python)
 
 Test harness for the [JSON Schema Annotation Test Suite](https://github.com/json-schema-org/JSON-Schema-Test-Suite/tree/main/annotations).  
+
+Test harness for the [JSON Schema Annotation Test Suite](https://github.com/json-schema-org/JSON-Schema-Test-Suite/tree/main/annotations).  
 Built for the GSoC 2026 qualification task (**Unify the Test Suite**).
 
 ---

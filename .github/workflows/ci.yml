@@ -1,10 +1,10 @@
-name: CI
+name: CI - JSON Schema Annotation Tests (Python)
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   test:
@@ -14,15 +14,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: recursive   # if JSON-Schema-Test-Suite is a submodule
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          node-version: 20
+          python-version: '3.12'        # or '3.11', '3.13' — any recent version works
+          cache: 'pip'                  # speeds up repeated runs
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          python -m pip install --upgrade pip
+          pip install "jschon[requests]"    # [requests] enables remote $ref support
 
       - name: Run annotation tests
-        run: npx tsx src/index.ts
+        run: python run_harness.py        # Change this if your script has a different name
+
+      - name: Upload test report (optional)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: annotation-test-report
+          path: |
+            data/report.json
+            data/report.html

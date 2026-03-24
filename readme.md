@@ -68,6 +68,6 @@ The harness compares annotation values but does not verify the exact schema loca
 
 ## Previous Version (Hyperjump)
 
-I initially built a harness using @hyperjump/json-schema (TypeScript), which passed all 84 tests. However, Hyperjump already uses the annotation test suite, so it did not meet the “does not already use” condition. The Hyperjump version is kept in the hyperjump/ folder for reference and verification. Only library is changed , harness idea is reserved 
+I initially built a harness using @hyperjump/json-schema (TypeScript), which passed all 84 tests. However, Hyperjump already uses the annotation test suite, so it did not meet the “does not already use” condition. The Hyperjump result is kept in the [docs/hyperjump](https://github.com/Anshikakalpana/json-schema-annotation-harness-ts/blob/main/docs/hyperjump-results.md) folder for reference and verification. Only library is changed , harness idea is reserved 
 
 
